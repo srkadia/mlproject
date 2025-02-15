@@ -1,6 +1,6 @@
 import os
 import sys
-from src.exception import CustomExeption
+from src.exception import CustomException
 from src.logger import logging
 import pandas as pd
 
@@ -44,7 +44,7 @@ class DataIngestion:
                 self.ingestion_config.test_data_path
             )
         except Exception as e:
-            raise CustomExeption(e, sys)
+            raise CustomException(e, sys)
         
 if __name__ == "__main__":
     obj = DataIngestion()
